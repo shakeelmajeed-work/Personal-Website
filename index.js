@@ -2,14 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import me from './images/Profile Pic2.png';
-import {borders} from '@material-ui/core';
+//import {borders} from '@material-ui/core';
 import Box from '@material-ui/core/Box';
-import { makeStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import MailIcon from '@material-ui/icons/Mail';
+import Avatar from '@material-ui/core/Avatar';
 
 
 function Image(props){
@@ -25,23 +22,44 @@ function Text(props){
   <div style={{ textAlign: 'center'}}>
     <h1>Shakeel Majeed</h1>
     <br></br>
-      <Box fontWeight="fontWeightBold" component="span" display="block">
-        About me:
-      </Box> 
-      <Box fontWeight="fontWeightRegular" component="span" display="block">
-        Since a young age, I have been prudent in absorbing information on Data Structures and Algorithms and Economics. Having built a Full Stack Web App and written an essay on how Oligopolies and Monopolies operate, I know putting my faith and effort into my interests will lay the foundations for my future. Furthermore, I aspire to be a SWE.
-      </Box>
+    <hr></hr>
+      <div>
+          <strong>About me: </strong>Since a young age, I have been prudent in absorbing information on Data Structures and Algorithms and Economics. Having built a Full Stack Web App and written an essay on how Oligopolies and Monopolies operate, I know putting my faith and effort into my interests will lay the foundations for my future. Furthermore, I aspire to be a SWE.
+      </div>
+      <hr></hr>
+      <div style={{textAlign:'left'}}>
+        <Box fontWeight="fontWeightRegular" component="span" display="inline-block">
+            <strong>Technologies:</strong> Python (including Django), JavaScript (including React but ongoing), <a href="https://github.com/shakeelmajeed-work">Github</a>
+        </Box>  
+      </div>
+      <hr></hr>
+      <div style={{textAlign:'left'}}>
+        <Box fontWeight="fontWeightRegular" component="span" display="inline-block">
+            <strong>Resume: </strong><a href="https://drive.google.com/file/d/1GfgectcYlR6zP-JY-vehviky947t3Vo1/view?usp=sharing">Click here</a>
+        </Box>
+      </div>
+      <hr></hr>
   </div>
   
   );
 }
+
+function Links(props){
+  return(
+    <div id="footer" style={{textAlign:'center'}}>
+      <a href="https://www.linkedin.com/in/shakeel-majeed/" class="fa fa-linkedin"></a>
+      <a href="mailto:17majeed_s@bexleygs.co.uk" class="fa fa-google"></a>
+      </div>
+  );
+}
+
 const text = <Text />;
 ReactDOM.render(
   <React.Fragment>
     <Image />
     <Text />
+    <Links />
   </React.Fragment>,
-  
   document.getElementById('root')
 );
 
